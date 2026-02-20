@@ -668,6 +668,9 @@
   @media print {
     .section { padding: 2rem 0; }
     body { font-size: 10pt; }
+    .pdf-download-btn { display: none !important; }
+    .side-nav { display: none !important; }
+    .toc { display: none !important; }
   }
   @media (max-width: 768px) {
     .stats-row { grid-template-columns: repeat(2, 1fr); }
@@ -2439,7 +2442,7 @@
     <div class="cost-highlight">
       <div class="cost-range">$51,600</div>
       <div class="cost-label">Inkline Development &amp; Build</div>
-      <div class="cost-note">Based on $100/hr blended rate. Final pricing structured as package-based deliverables aligned to the scope phases above.</div>
+      <div class="cost-note">Based on $100/hr blended rate. Final pricing structured as package-based deliverables aligned to the scope phases above. Applicable taxes not included.</div>
     </div>
   </div>
 </section>
@@ -3114,6 +3117,49 @@
   }
 })();
 </script>
+
+<!-- PDF Download Button -->
+<style>
+  .pdf-download-btn {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.7rem 1.25rem;
+    background: var(--cobalt);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    font-family: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+  }
+  .pdf-download-btn:hover {
+    background: var(--cerulean);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+  }
+  .pdf-download-btn svg {
+    width: 16px;
+    height: 16px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+</style>
+<a class="pdf-download-btn" href="assets/pdf/Inkline-RHF-Website-Consolidation-Proposal.pdf" target="_blank">
+  <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+  View PDF
+</a>
 
 </body>
 </html>
