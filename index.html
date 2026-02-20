@@ -4,6 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Rideau Hall Foundation - Website Consolidation | Inkline Development Scope</title>
+<meta property="og:title" content="Rideau Hall Foundation — Website Consolidation Proposal">
+<meta property="og:description" content="Development scope &amp; strategy for unifying 8 program websites into a single, cohesive digital platform by Inkline + Attention Strategy.">
+<meta property="og:image" content="assets/images/screenshots/rhf-frh.png">
+<meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=IBM+Plex+Serif:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
@@ -672,6 +676,9 @@
     .side-nav { display: none !important; }
     .toc { display: none !important; }
   }
+  /* Prevent horizontal page scroll on all viewports */
+  html, body { overflow-x: hidden; }
+
   @media (max-width: 768px) {
     .stats-row { grid-template-columns: repeat(2, 1fr); }
     .site-grid { grid-template-columns: 1fr; }
@@ -684,6 +691,40 @@
     .journey-step::after { display: none; }
     .toc-grid { grid-template-columns: 1fr; }
     .toc-item { padding: 0.75rem 1rem; }
+
+    /* Hero meta row: stack vertically */
+    .hero-meta { flex-direction: column; gap: 0.75rem; }
+
+    /* Navigation mega menu 4-col pillar grid → 2 columns */
+    .pillar-grid {
+      grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    /* Nav level text wrapping */
+    .nav-level { flex-wrap: wrap; }
+    .nav-level > div:last-child { min-width: 0; }
+    .nav-level p { word-wrap: break-word; overflow-wrap: break-word; }
+
+    /* Tables: scroll wrapper contains overflow */
+    .table-scroll {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    /* Scope grid: single column */
+    .scope-grid { grid-template-columns: 1fr !important; }
+
+    /* Portfolio grid: single column */
+    .portfolio-grid { grid-template-columns: 1fr !important; }
+
+    /* Team grid: single column */
+    .team-grid { grid-template-columns: 1fr !important; }
+
+    /* Consideration grid: single column */
+    .considerations-grid { grid-template-columns: 1fr !important; }
+
+    /* Timeline phase items: single column */
+    .phase-items { grid-template-columns: 1fr !important; }
   }
 
   /* Table of Contents */
@@ -1478,7 +1519,7 @@
         <div style="flex:1;">
           <p style="margin-bottom:0.5rem; font-weight:600; color:var(--cobalt);">Programs Mega Menu — Thematic Pillars</p>
           <p class="small text-grey" style="margin-bottom:1rem;">"Programs" opens a full-width mega menu grouping all 11 programs into four intuitive pillars. Each program links to its own landing page with consistent sub-navigation.</p>
-          <div style="display:grid; grid-template-columns: repeat(4, 1fr); gap:1rem;">
+          <div class="pillar-grid" style="display:grid; grid-template-columns: repeat(4, 1fr); gap:1rem;">
       <!-- Pillar 1: Innovation -->
       <div style="background:white; border-radius:12px; padding:1.25rem; border-top:3px solid var(--cerulean);">
         <div style="font-size:0.9rem; text-transform:uppercase; letter-spacing:0.05em; color:var(--cerulean); font-weight:700; margin-bottom:0.75rem;">Innovation</div>
@@ -1754,7 +1795,7 @@
 
     <p style="margin-top:1.5rem;">Redirect approach per domain:</p>
 
-    <table class="arch-table" style="margin:1.5rem 0;">
+    <div class="table-scroll"><table class="arch-table" style="margin:1.5rem 0;">
       <thead>
         <tr>
           <th>Legacy Domain</th>
@@ -1771,7 +1812,7 @@
         <tr><td>queenelizabethscholars.ca</td><td>301 to /programs/qe-scholars/</td></tr>
         <tr><td>canadianinnovationspace.ca</td><td>301 to /programs/innovation-space/</td></tr>
       </tbody>
-    </table>
+    </table></div>
 
     <h3 style="margin-top:3rem;">Domain Authority Consolidation</h3>
     <p>Backlinks from all 8 domains will be consolidated into a single domain, potentially creating a much stronger authority signal. The combined backlink profile should be audited during discovery to identify high-value links to preserve and prioritize in communications with external linking partners.</p>
@@ -2075,7 +2116,7 @@
       </div>
     </div>
 
-    <table class="arch-table" style="margin-top:0.5rem; margin-bottom:2rem;">
+    <div class="table-scroll"><table class="arch-table" style="margin-top:0.5rem; margin-bottom:2rem;">
       <thead>
         <tr>
           <th>Proposed CPT</th>
@@ -2098,7 +2139,7 @@
         <tr><td><strong>Impact Story</strong></td><td class="count">New</td><td class="source">Consolidated</td><td>Monthly impact stories/op-eds; cross-program tagging</td></tr>
         <tr><td><strong>Member Profile</strong></td><td class="count">~3,228</td><td class="source">leadershipcanada.ca</td><td>Conference members, alumni, regional chairs</td></tr>
       </tbody>
-    </table>
+    </table></div>
 
     <div class="req-card">
       <div class="req-card-header">
@@ -2373,7 +2414,7 @@
 
     <p>Estimates represent Inkline's development and build scope as technical implementation partner. Organized to mirror the scope of work phases in §4.3 as requested in §5.2.</p>
 
-    <table class="effort-table">
+    <div class="table-scroll"><table class="effort-table">
       <thead>
         <tr>
           <th>Deliverable</th>
@@ -2437,7 +2478,7 @@
 
         <tr class="total-row"><td><strong>TOTAL</strong></td><td></td><td><strong>516</strong></td></tr>
       </tbody>
-    </table>
+    </table></div>
 
     <div class="cost-highlight">
       <div class="cost-range">$51,600</div>
@@ -3127,15 +3168,14 @@
     z-index: 1000;
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    padding: 0.7rem 1.25rem;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
     background: var(--cobalt);
     color: white;
     border: none;
-    border-radius: 8px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    font-family: inherit;
+    border-radius: 50%;
     text-decoration: none;
     cursor: pointer;
     box-shadow: 0 4px 16px rgba(0,0,0,0.2);
@@ -3147,8 +3187,8 @@
     box-shadow: 0 6px 20px rgba(0,0,0,0.25);
   }
   .pdf-download-btn svg {
-    width: 16px;
-    height: 16px;
+    width: 18px;
+    height: 18px;
     fill: none;
     stroke: currentColor;
     stroke-width: 2;
@@ -3156,9 +3196,8 @@
     stroke-linejoin: round;
   }
 </style>
-<a class="pdf-download-btn" href="assets/pdf/Inkline-RHF-Website-Consolidation-Proposal.pdf" target="_blank">
+<a class="pdf-download-btn" href="assets/pdf/Inkline-RHF-Website-Consolidation-Proposal.pdf" target="_blank" title="View PDF">
   <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-  View PDF
 </a>
 
 </body>
