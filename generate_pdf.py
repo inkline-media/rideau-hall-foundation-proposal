@@ -9,6 +9,7 @@ Three-stage process:
 """
 
 import asyncio, re
+from datetime import datetime
 from pathlib import Path
 from playwright.async_api import async_playwright
 import fitz  # PyMuPDF
@@ -140,6 +141,32 @@ PRINT_CSS = """
   .stat-card { padding: 0.75rem !important; }
   .stat-card .stat-number { font-size: 1.5rem !important; }
   .stat-card .stat-label { font-size: 0.65rem !important; }
+
+  /* ---- Compact cost-highlight for PDF so it doesn't push to next page ---- */
+  .cost-highlight {
+    padding: 1.25rem 2rem !important;
+    margin: 1rem 0 !important;
+    border-radius: 12px !important;
+  }
+  .cost-highlight .cost-range {
+    font-size: 2rem !important;
+    margin-bottom: 0.25rem !important;
+  }
+  .cost-highlight .cost-label {
+    font-size: 0.9rem !important;
+  }
+  .cost-highlight .cost-note {
+    font-size: 0.75rem !important;
+    margin-top: 0.25rem !important;
+  }
+
+  /* ---- Nav arch: undo viewport breakout for PDF ---- */
+  .nav-arch {
+    width: auto !important;
+    left: auto !important;
+    transform: none !important;
+    padding: 0 !important;
+  }
 
   /* ---- Content padding (backgrounds bleed edge-to-edge, text gets margin) ---- */
   .container {
@@ -288,8 +315,9 @@ def add_branded_footer(pdf_path: Path):
         page.insert_text(fitz.Point(28, cy), left_txt,
                          fontname="helv", fontsize=6.5, color=GREY_MED)
 
-        # -- Right text: prefix in grey, page number in cerulean --
-        prefix = "February 2026  \u00b7  "
+        # -- Right text: date saved + page number --
+        date_saved = datetime.now().strftime("%B %d, %Y")
+        prefix = f"PDF saved {date_saved}  \u00b7  "
         pgtxt = f"Page {i + 1} of {total}"
         pw = fitz.get_text_length(prefix, fontname="helv", fontsize=6.5)
         gw = fitz.get_text_length(pgtxt, fontname="helv", fontsize=6.5)

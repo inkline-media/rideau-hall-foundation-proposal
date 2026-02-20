@@ -608,8 +608,16 @@
   .journey-step h4 { font-size: 1rem; margin-bottom: 0.2rem; }
   .journey-step p { font-size: 1rem; color: var(--grey-med); margin: 0; line-height: 1.3; }
 
-  /* Nav architecture */
-  .nav-arch { margin: 2rem 0; }
+  /* Nav architecture — break out of container to use full width */
+  .nav-arch {
+    margin: 2rem 0;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0 2rem;
+    box-sizing: border-box;
+  }
   .nav-level {
     display: flex;
     align-items: center;
@@ -2843,9 +2851,9 @@
       <div style="background:rgba(255,255,255,0.12); backdrop-filter:blur(8px); border:1px solid rgba(255,255,255,0.15); border-radius:12px; padding:1.5rem;">
         <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:0.75rem;">
           <span style="background:rgba(255,255,255,0.2); color:white; font-weight:700; font-size:0.85rem; width:28px; height:28px; border-radius:50%; display:flex; align-items:center; justify-content:center;">2</span>
-          <strong style="font-size:1.05rem;">Finalize Pricing</strong>
+          <strong style="font-size:1.05rem;">Combine Pricing</strong>
         </div>
-        <p style="color:rgba(255,255,255,0.8); font-size:0.9rem; line-height:1.6; margin:0;">Structure package-based deliverables to give RHF clarity on costs per phase with no surprises.</p>
+        <p style="color:rgba(255,255,255,0.8); font-size:0.9rem; line-height:1.6; margin:0;">Merge Attention Strategy's strategy &amp; design fees with Inkline's development pricing into a single, unified investment summary for RHF.</p>
       </div>
 
       <div style="background:rgba(255,255,255,0.12); backdrop-filter:blur(8px); border:1px solid rgba(255,255,255,0.15); border-radius:12px; padding:1.5rem;">
