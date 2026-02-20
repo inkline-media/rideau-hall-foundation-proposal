@@ -308,8 +308,8 @@ def add_branded_footer(pdf_path: Path):
                          fontname="helv", fontsize=6.5, color=GREY_MED)
 
         # -- Right text: date saved + page number --
-        date_saved = datetime.now().strftime("%B %d, %Y")
-        prefix = f"PDF saved {date_saved}  \u00b7  "
+        version_ts = datetime.now().strftime("%B %d, %Y at %I:%M %p")
+        prefix = f"Version: {version_ts}  \u00b7  "
         pgtxt = f"Page {i + 1} of {total}"
         pw = fitz.get_text_length(prefix, fontname="helv", fontsize=6.5)
         gw = fitz.get_text_length(pgtxt, fontname="helv", fontsize=6.5)
