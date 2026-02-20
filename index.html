@@ -709,6 +709,11 @@
     .table-scroll {
       overflow-x: auto;
       -webkit-overflow-scrolling: touch;
+      max-width: 100%;
+      width: 100%;
+    }
+    .table-scroll table {
+      min-width: 0;
     }
 
     /* Scope grid: single column */
@@ -1326,7 +1331,7 @@
       </a>
       <a href="#effort" class="toc-item">
         <span class="toc-num">07</span>
-        <div><div class="toc-label">Effort &amp; Investment</div><div class="toc-sublabel">Development estimates</div></div>
+        <div><div class="toc-label">Effort &amp; Investment</div><div class="toc-sublabel">Development pricing</div></div>
       </a>
       <a href="#timeline" class="toc-item">
         <span class="toc-num">08</span>
@@ -2409,81 +2414,81 @@
 <section class="section" id="effort">
   <div class="container">
     <p class="section-label"><svg class="fa-icon" viewBox="0 0 640 640" fill="currentColor"><path d="M192 160L192 144C192 99.8 278 64 384 64C490 64 576 99.8 576 144L576 160C576 190.6 534.7 217.2 474 230.7C471.6 227.9 469.1 225.2 466.6 222.7C451.1 207.4 431.1 195.8 410.2 187.2C368.3 169.7 313.7 160.1 256 160.1C234.1 160.1 212.7 161.5 192.2 164.2C192 162.9 192 161.5 192 160.1zM496 417L496 370.8C511.1 366.9 525.3 362.3 538.2 356.9C551.4 351.4 564.3 344.7 576 336.6L576 352C576 378.8 544.5 402.5 496 417zM496 321L496 288C496 283.5 495.6 279.2 495 275C510.5 271.1 525 266.4 538.2 260.8C551.4 255.2 564.3 248.6 576 240.5L576 255.9C576 282.7 544.5 306.4 496 320.9zM64 304L64 288C64 243.8 150 208 256 208C362 208 448 243.8 448 288L448 304C448 348.2 362 384 256 384C150 384 64 348.2 64 304zM448 400C448 444.2 362 480 256 480C150 480 64 444.2 64 400L64 384.6C75.6 392.7 88.5 399.3 101.8 404.9C143.7 422.4 198.3 432 256 432C313.7 432 368.3 422.3 410.2 404.9C423.4 399.4 436.3 392.7 448 384.6L448 400zM448 480.6L448 496C448 540.2 362 576 256 576C150 576 64 540.2 64 496L64 480.6C75.6 488.7 88.5 495.3 101.8 500.9C143.7 518.4 198.3 528 256 528C313.7 528 368.3 518.3 410.2 500.9C423.4 495.4 436.3 488.7 448 480.6z"/></svg>Effort &amp; Investment</p>
-    <h2>Development <span class="text-cobalt">Estimates</span></h2>
+    <h2>Development <span class="text-cobalt">Investment</span></h2>
     <div class="divider"></div>
 
-    <p>Estimates represent Inkline's development and build scope as technical implementation partner. Organized to mirror the scope of work phases in §4.3 as requested in §5.2.</p>
+    <p>Pricing represents Inkline's development and build scope as technical implementation partner. Organized to mirror the scope of work phases in §4.3 as requested in §5.2.</p>
 
     <div class="table-scroll"><table class="effort-table">
       <thead>
         <tr>
           <th>Deliverable</th>
           <th>Ref</th>
-          <th>Hours</th>
+          <th>Price</th>
         </tr>
       </thead>
       <tbody>
         <!-- §4.3 Phase 1: Discovery & Planning -->
         <tr style="background:var(--cerulean-10);"><td colspan="3" style="font-weight:600; font-size:0.85rem; letter-spacing:0.06em; text-transform:uppercase; color:var(--cerulean); padding:0.6rem 1rem;">1. Discovery &amp; Planning — §4.3</td></tr>
-        <tr><td>Technical Discovery &amp; Salesforce Assessment</td><td>§4.3.1.1</td><td>12</td></tr>
-        <tr><td>Content Audit &amp; Migration Analysis</td><td>§4.3.1.2</td><td>8</td></tr>
-        <tr><td>CPT Data Model &amp; Taxonomy Design</td><td>§4.3.1.3</td><td>16</td></tr>
-        <tr><td>Technology &amp; Plugin Requirements</td><td>§4.3.1.4</td><td>4</td></tr>
+        <tr><td>Technical Discovery &amp; Salesforce Assessment</td><td>§4.3.1.1</td><td>$1,200</td></tr>
+        <tr><td>Content Audit &amp; Migration Analysis</td><td>§4.3.1.2</td><td>$800</td></tr>
+        <tr><td>CPT Data Model &amp; Taxonomy Design</td><td>§4.3.1.3</td><td>$1,600</td></tr>
+        <tr><td>Technology &amp; Plugin Requirements</td><td>§4.3.1.4</td><td>$400</td></tr>
 
         <!-- §4.3 Phase 2: Design & Theme -->
         <tr style="background:var(--cobalt-10);"><td colspan="3" style="font-weight:600; font-size:0.85rem; letter-spacing:0.06em; text-transform:uppercase; color:var(--cobalt); padding:0.6rem 1rem;">2. Design &amp; Theme Development — §4.3</td></tr>
-        <tr><td>Theme Setup &amp; Child Theme Configuration</td><td>§4.3.2.1</td><td>8</td></tr>
-        <tr><td>Wireframe &amp; Prototype Technical Review</td><td>§4.3.2.2</td><td>4</td></tr>
-        <tr><td>Visual Design Implementation in Elementor</td><td>§4.3.2.3</td><td>8</td></tr>
+        <tr><td>Theme Setup &amp; Child Theme Configuration</td><td>§4.3.2.1</td><td>$800</td></tr>
+        <tr><td>Wireframe &amp; Prototype Technical Review</td><td>§4.3.2.2</td><td>$400</td></tr>
+        <tr><td>Visual Design Implementation in Elementor</td><td>§4.3.2.3</td><td>$800</td></tr>
 
         <!-- §4.3 Phase 3: Development & Implementation -->
         <tr style="background:var(--magenta-10);"><td colspan="3" style="font-weight:600; font-size:0.85rem; letter-spacing:0.06em; text-transform:uppercase; color:var(--magenta); padding:0.6rem 1rem;">3. Development &amp; Implementation — §4.3</td></tr>
-        <tr><td>WordPress Setup &amp; CPT Architecture (12 types)</td><td>§4.3.3.1</td><td>60</td></tr>
-        <tr><td>Gravity Forms &amp; Salesforce API Integration</td><td>§4.3.3.2</td><td>20</td></tr>
-        <tr><td>Bilingual Implementation (WPML/Weglot)</td><td>§4.3.3.3</td><td>32</td></tr>
-        <tr><td>GA4, Event Tracking &amp; AdWords Compliance</td><td>§4.3.3.4</td><td>12</td></tr>
-        <tr><td>Page Templates &amp; Staff-Manageable Structures</td><td>§4.3.3.5</td><td>100</td></tr>
-        <tr><td>National Impact Showcase — Technical Build</td><td>§4.3.3.6</td><td>24</td></tr>
+        <tr><td>WordPress Setup &amp; CPT Architecture (12 types)</td><td>§4.3.3.1</td><td>$6,000</td></tr>
+        <tr><td>Gravity Forms &amp; Salesforce API Integration</td><td>§4.3.3.2</td><td>$2,000</td></tr>
+        <tr><td>Bilingual Implementation (WPML/Weglot)</td><td>§4.3.3.3</td><td>$3,200</td></tr>
+        <tr><td>GA4, Event Tracking &amp; AdWords Compliance</td><td>§4.3.3.4</td><td>$1,200</td></tr>
+        <tr><td>Page Templates &amp; Staff-Manageable Structures</td><td>§4.3.3.5</td><td>$10,000</td></tr>
+        <tr><td>National Impact Showcase — Technical Build</td><td>§4.3.3.6</td><td>$2,400</td></tr>
 
         <!-- §4.3 Phase 4: Content Enhancement -->
         <tr style="background:var(--shamrock-10);"><td colspan="3" style="font-weight:600; font-size:0.85rem; letter-spacing:0.06em; text-transform:uppercase; color:var(--shamrock); padding:0.6rem 1rem;">4. Content Enhancement &amp; Functionality — §4.3</td></tr>
-        <tr><td>Content Migration (Technical Execution)</td><td>§4.3.4.1</td><td>60</td></tr>
-        <tr><td>Navigation, IA &amp; UI Implementation</td><td>§4.3.4.2</td><td>16</td></tr>
-        <tr><td>Monthly Impact Stories &amp; Op-Eds CPT</td><td>§4.3.4.3</td><td>8</td></tr>
-        <tr><td>External Content Embeds (iframe)</td><td>§4.3.4.4</td><td>4</td></tr>
-        <tr><td>URL Redirect Mapping (8 domains)</td><td>§4.3.4.5</td><td>16</td></tr>
+        <tr><td>Content Migration (Technical Execution)</td><td>§4.3.4.1</td><td>$6,000</td></tr>
+        <tr><td>Navigation, IA &amp; UI Implementation</td><td>§4.3.4.2</td><td>$1,600</td></tr>
+        <tr><td>Monthly Impact Stories &amp; Op-Eds CPT</td><td>§4.3.4.3</td><td>$800</td></tr>
+        <tr><td>External Content Embeds (iframe)</td><td>§4.3.4.4</td><td>$400</td></tr>
+        <tr><td>URL Redirect Mapping (8 domains)</td><td>§4.3.4.5</td><td>$1,600</td></tr>
 
         <!-- §4.3 Phase 5: Testing & QA -->
         <tr style="background:var(--lime-10);"><td colspan="3" style="font-weight:600; font-size:0.85rem; letter-spacing:0.06em; text-transform:uppercase; color:var(--shamrock); padding:0.6rem 1rem;">5. Testing &amp; Quality Assurance — §4.3</td></tr>
-        <tr><td>Cross-Device, Cross-Browser Testing</td><td>§4.3.5.1</td><td>16</td></tr>
-        <tr><td>Bug Identification &amp; Resolution</td><td>§4.3.5.2</td><td>12</td></tr>
-        <tr><td>Accessibility, Bilingual &amp; Analytics Validation</td><td>§4.3.5.3</td><td>12</td></tr>
+        <tr><td>Cross-Device, Cross-Browser Testing</td><td>§4.3.5.1</td><td>$1,600</td></tr>
+        <tr><td>Bug Identification &amp; Resolution</td><td>§4.3.5.2</td><td>$1,200</td></tr>
+        <tr><td>Accessibility, Bilingual &amp; Analytics Validation</td><td>§4.3.5.3</td><td>$1,200</td></tr>
 
         <!-- §4.3 Phase 6: Launch & Post-Launch -->
         <tr style="background:var(--cobalt-10);"><td colspan="3" style="font-weight:600; font-size:0.85rem; letter-spacing:0.06em; text-transform:uppercase; color:var(--cobalt); padding:0.6rem 1rem;">6. Launch &amp; Post-Launch Support — §4.3</td></tr>
-        <tr><td>Launch Coordination &amp; DNS Cutover</td><td>§4.3.6.1</td><td>8</td></tr>
-        <tr><td>Staff Training &amp; Documentation</td><td>§4.3.6.2</td><td>16</td></tr>
-        <tr><td>Post-Launch Support (4 weeks)</td><td>§4.3.6.4</td><td>20</td></tr>
+        <tr><td>Launch Coordination &amp; DNS Cutover</td><td>§4.3.6.1</td><td>$800</td></tr>
+        <tr><td>Staff Training &amp; Documentation</td><td>§4.3.6.2</td><td>$1,600</td></tr>
+        <tr><td>Post-Launch Support (4 weeks)</td><td>§4.3.6.4</td><td>$2,000</td></tr>
 
         <!-- Inkline Additions -->
         <tr style="background:var(--cerulean-10);"><td colspan="3" style="font-weight:600; font-size:0.85rem; letter-spacing:0.06em; text-transform:uppercase; color:var(--cerulean); padding:0.6rem 1rem;">Inkline Additions — Beyond RFP</td></tr>
-        <tr><td>SEO Migration &amp; Domain Authority Consolidation</td><td>Added</td><td>16</td></tr>
-        <tr><td>Answer Engine Optimization (AEO)</td><td>Added</td><td>8</td></tr>
-        <tr><td>Performance &amp; Security Hardening</td><td>Added</td><td>12</td></tr>
-        <tr><td>WCAG 2.2 AA Accessibility Compliance</td><td>§4.2.4</td><td>24</td></tr>
+        <tr><td>SEO Migration &amp; Domain Authority Consolidation</td><td>Added</td><td>$1,600</td></tr>
+        <tr><td>Answer Engine Optimization (AEO)</td><td>Added</td><td>$800</td></tr>
+        <tr><td>Performance &amp; Security Hardening</td><td>Added</td><td>$1,200</td></tr>
+        <tr><td>WCAG 2.2 AA Accessibility Compliance</td><td>§4.2.4</td><td>$2,400</td></tr>
 
         <!-- Project Management -->
         <tr style="background:var(--off-white);"><td colspan="3" style="font-weight:600; font-size:0.85rem; letter-spacing:0.06em; text-transform:uppercase; color:var(--grey-med); padding:0.6rem 1rem;">Project Management</td></tr>
-        <tr><td>Project Management &amp; Coordination</td><td>Ongoing</td><td>40</td></tr>
+        <tr><td>Project Management &amp; Coordination</td><td>Ongoing</td><td>$4,000</td></tr>
 
-        <tr class="total-row"><td><strong>TOTAL</strong></td><td></td><td><strong>516</strong></td></tr>
+        <tr class="total-row"><td><strong>TOTAL</strong></td><td></td><td><strong>$51,600</strong></td></tr>
       </tbody>
     </table></div>
 
     <div class="cost-highlight">
       <div class="cost-range">$51,600</div>
       <div class="cost-label">Inkline Development &amp; Build</div>
-      <div class="cost-note">Based on $100/hr blended rate. Final pricing structured as package-based deliverables aligned to the scope phases above. Applicable taxes not included.</div>
+      <div class="cost-note">Final pricing structured as package-based deliverables aligned to the scope phases above. Applicable taxes not included.</div>
     </div>
   </div>
 </section>
@@ -2840,7 +2845,7 @@
           <span style="background:rgba(255,255,255,0.2); color:white; font-weight:700; font-size:0.85rem; width:28px; height:28px; border-radius:50%; display:flex; align-items:center; justify-content:center;">2</span>
           <strong style="font-size:1.05rem;">Finalize Pricing</strong>
         </div>
-        <p style="color:rgba(255,255,255,0.8); font-size:0.9rem; line-height:1.6; margin:0;">Convert hourly estimates into package-based deliverables. Structure pricing to give RHF clarity on costs per phase with no surprises.</p>
+        <p style="color:rgba(255,255,255,0.8); font-size:0.9rem; line-height:1.6; margin:0;">Structure package-based deliverables to give RHF clarity on costs per phase with no surprises.</p>
       </div>
 
       <div style="background:rgba(255,255,255,0.12); backdrop-filter:blur(8px); border:1px solid rgba(255,255,255,0.15); border-radius:12px; padding:1.5rem;">
