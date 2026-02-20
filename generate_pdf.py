@@ -160,14 +160,6 @@ PRINT_CSS = """
     margin-top: 0.25rem !important;
   }
 
-  /* ---- Nav arch: undo viewport breakout for PDF ---- */
-  .nav-arch {
-    width: auto !important;
-    left: auto !important;
-    transform: none !important;
-    padding: 0 !important;
-  }
-
   /* ---- Content padding (backgrounds bleed edge-to-edge, text gets margin) ---- */
   .container {
     padding-left: 2.5rem !important;
